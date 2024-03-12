@@ -25,9 +25,9 @@
 - [NestJS Microservice RabbitMQ](https://docs.nestjs.com/microservices/rabbitmq)
 - [NestJS Mongo](https://docs.nestjs.com/techniques/mongodb#model-injection)
 
-![mono-repo](./image/monorepo.png)
-
 ## Mono Repo의 구조
+
+![mono-repo](./image/monorepo.png)
 
 - 하나의 프로젝트를 작은 단위로 나누고 하나의 repository로 관리
 - 장점
