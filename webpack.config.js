@@ -1,6 +1,7 @@
-const swcDefaultConfig =
-  require('@nestjs/cli/lib/compiler/defaults/swc-defaults').swcDefaultsFactory()
-    .swcOptions;
+// const swcDefaultConfig =
+//   require('@nestjs/cli/lib/compiler/defaults/swc-defaults').swcDefaultsFactory()
+//     .swcOptions;
+const path = require('path');
 
 module.exports = {
   module: {
@@ -10,7 +11,18 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'swc-loader',
-          options: swcDefaultConfig,
+          options: {
+            sourceMaps: true,
+            jsc: {
+              parser: {
+                syntax: 'typescript',
+                decorators: true,
+                dynamicImport: true,
+              },
+              baseUrl: path.resolve(__dirname, './'),
+            },
+            minify: false,
+          },
         },
       },
     ],
