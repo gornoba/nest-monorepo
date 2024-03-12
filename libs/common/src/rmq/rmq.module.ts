@@ -11,10 +11,10 @@ interface RmqModuleOptions {
   providers: [RmqService],
   exports: [RmqService],
 })
-export class RMqModule {
+export class RmqModule {
   static register({ name }: RmqModuleOptions): DynamicModule {
     return {
-      module: RMqModule,
+      module: RmqModule,
       imports: [
         ClientsModule.registerAsync([
           {
